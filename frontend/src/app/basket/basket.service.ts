@@ -64,7 +64,9 @@ export class BasketService {
 
   addItemToBasket(item: IProduct, quantity = 1) {
     const itemToAdd: IBasketItem = this.mapProductToBasketItem(item, quantity);
+
     const basket = this.getCurrentBasketValue() ?? this.createBasket();
+    console.log("basket = ", basket)
     basket.items = this.addOrUpdateItem(basket.items, itemToAdd, quantity);
     this.setBasket(basket);
   }
@@ -134,7 +136,9 @@ export class BasketService {
 
   private createBasket(): IBasket {
     const basket = new Basket();
+    console.log("basket create")
     localStorage.setItem('basket_id', basket.id);
+    console.log("basket id create")
     return basket;
   }
 

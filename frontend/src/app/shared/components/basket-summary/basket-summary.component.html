@@ -33,7 +33,7 @@
                            </div>
                         </div>
                     </th>
-                    <td class="align-middle"><strong>{{item.price | currency: 'INR'}}</strong></td>
+                    <td class="align-middle"><strong>{{item.price | currency: 'VND'}}</strong></td>
                     <td class="align-middle">
                         <div class="d-flex align-items-center" [class.justify-content-center]="!isBasket">
                             <i *ngIf="isBasket" (click)="decrementItem(item)" class="fa fa-minus-circle text-warning mr-2" style="cursor: pointer; font-size: 2em;"></i>
@@ -42,12 +42,12 @@
                         </div>
                     </td>
                     <td class="align-middle">
-                        <strong>{{item.price * item.quantity | currency: 'INR'}}</strong>
+                        <strong>{{item.price * item.quantity | currency: 'VND'}}</strong>
                     </td>
                     <td class="align-middle text-center">
                         <a class="text-danger">
                             <i *ngIf="isBasket" (click)="removeBasketItem(item)" class="fa fa-trash" aria-hidden="true" style="cursor: pointer; font-size: 2em;"></i>
-    
+
                         </a>
                     </td>
                 </tr>
