@@ -9,11 +9,11 @@
                     <app-checkout-delivery [checkoutForm]="checkoutForm"></app-checkout-delivery>
                 </cdk-step>
                 <cdk-step [label]="'Review'">
-                    <app-checkout-review [appStepper]="appStepper"></app-checkout-review>
+                    <app-checkout-review [checkoutForm]="checkoutForm" [appStepper]="appStepper"></app-checkout-review>
                 </cdk-step>
-                <cdk-step [label]="'Payment'">
+                <!-- <cdk-step [label]="'Payment'">
                     <app-checkout-payment [checkoutForm]="checkoutForm"></app-checkout-payment>
-                </cdk-step>
+                </cdk-step> -->
             </app-stepper>
         </div>
         <div class="col-4">

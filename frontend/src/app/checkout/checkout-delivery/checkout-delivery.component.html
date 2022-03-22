@@ -4,7 +4,7 @@
         <div class="col-6 form-group" *ngFor="let method of deliveryMethods">
             <input type="radio" id={{method.id}} value="{{method.id}}" formControlName="deliveryMethod" class="custom-control-input">
             <label for="{{method.id}}" (click)="setShippingPrice(method)" class="custom-control-label">
-                <strong>{{method.shortName}} - {{method.price | currency: 'INR'}}</strong>
+                <strong>{{method.shortName}} - {{method.price | currency: 'VND'}}</strong>
                 <br>
                 <span class="label-description">{{method.description}}</span>
             </label>
